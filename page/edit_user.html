@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/edit_user.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <h1 style="margin-top: 50px;">后台用户编辑</h1>
+    <div class="content">
+        <ul class="top">
+            <li style="margin-left: 340px;">用户名</li>
+            <li style="margin-left: 14px;">密码</li>
+            <li style="margin-left: 58px;">操作</li>
+        </ul>
+        <ul class="up">
+
+            <li v-for="(item,index) in userList">
+                <span style="margin-left: 340px;"><input type="text" :value="item.userName"></span>
+                <span style="margin-left: 20px;"><input type="text" :value="item.password"></span>
+                <span style="margin-left: 66px;">
+                   <button class="xiugai">修改</button>
+                   <button class="delete" :data="item.id">删除</button>
+               </span>
+            </li>
+
+        </ul>
+    </div>
+    <button class="submit">提交</button>
+</div>
+</body>
+<script src="./js/edit_user.js"></script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>个人博客</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container" id="container">
+            <a href="" class="title">我的个人博客 | 技术博客</a>
+            <ul class="menu">
+                <li><a href="/">首页</a></li>
+                <li><a href="/sitemap.html">地图</a></li>
+                <li><a href="/about.html">关于</a></li>
+                <li><a href="/guestbook.html">留言</a></li>
+                <li v-show="flag"><a href="/login.html">登录</a></li>
+                <li v-show="flag"><a href="/register.html">注册</a></li>
+                <li class="liperson" v-show="!flag"><a href="">个人信息</a>
+                    <ul class="person">
+                        <div class="image">
+                            <img src="./img/pictural.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="topInfo" style="margin-top: 2px;">
+                                <span class="out" @click="out">账号管理|退出</span>
+                            </div>
+                            <div class="contentInfo">
+                                <div class="userInfo">
+                                    <span>用户名:</span>
+                                    <span class="spanuser">{{userName}}</span>
+                                </div>
+                                <div class="userInfo">
+                                    <span>博客积分:</span>
+                                    <span class="spanPoints">600</span>
+                                </div>
+                                <div class="member">
+                                    <span @click="pRecord()" style="cursor: pointer">个人记录</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+            <div class="search_bar" id="searchBar">
+                <input type="text" placeholder="输入有关标签查找" id="searchValue">
+                <button id="search" @click="search()">搜索</button>
+            </div>
+        </div>
+    </header>
+    <div class="content" >
+        <div class="content_left">
+            <div class="every_day" id="every_day">
+                <span>每日一句</span>
+                <p v-html="getContent"></p>
+            </div>
+            <div class="article_list" id="article_list">
+                <div class="article" v-for="article in articleList">
+                    <a v-bind:href="article.link" class="article_title">{{ article.title }}</a>
+                    <p class="article_content">{{ article.content }}</p>
+                    <div class="article_foot">发布于{{ article.date }} |  浏览({{ article.views }}) | Tags：{{ article.tags }}</div>
+                </div>
+                <div class="page_tool">
+                    <ul>
+                        <li v-for="pageNum in pageNumList" v-on:click="jumpTo(pageNum.page)" v-bind:class="{now_page:(pageNum.text == page)}">{{ pageNum.text }}</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content_right">
+
+            <div class="right_moodule" id="random_tags">
+                <div>随机标签云</div>
+                <a v-for="tag in tags" :style="{color:randomColor(),fontSize:randomSize()}" :href="tag.link">{{ tag.text }}</a>
+
+            </div>
+
+            <div class="right_moodule" id="new_hot">
+                <div>最近热门</div>
+                <ul>
+                    <li v-for="temp in titleList">
+                        <a :href="temp.link">{{ temp.title }}</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="right_moodule" id="new_comments">
+                <div>最新评论</div>
+                <ul>
+                   <li v-for="comment in commentList">
+                       <div>
+                           <span>{{ comment.name }}</span>
+                           <span class="pull_right">{{ comment.date }}</span>
+                       </div>
+                       <p>{{ comment.comment}}</p>
+                   </li>
+                </ul>
+            </div>
+
+            <div class="right_moodule">
+                <div>友情链接</div>
+                <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
+                <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
+                <span><a href="/">挨踢茶馆</a></span><span><a href="/">挨踢茶馆</a></span>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+            <li>C++</li>
+        </ul>
+        <p>Copyright © 2010-2019 贾臻个人博客 All rights reserved. 由免费开源的WordPress强力驱动. 鲁ICP备14017955号</p>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!--    <script src="./js/axios.js"></script>-->
+    <script src="./js/index.js"></script>
+    <script src="./js/base.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

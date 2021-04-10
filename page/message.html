@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/message.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header><span>系统后台</span></header>
+    <div class="h1">
+        <span>用户留言排名操作</span>
+    </div>
+    <table border="1" class="content">
+        <tr>
+            <th>用户名</th>
+            <th>内容</th>
+            <th>时间</th>
+            <th>操作</th>
+        </tr>
+        <tr  v-for="(item) in list" class="neirong">
+            <td class="userName">{{item.user_name}}</td>
+            <td class="comment">{{ item.comments }}</td>
+            <td class="utime">{{item.utime}}</td>
+            <td class="btn">删除</td>
+        </tr>
+    </table>
+</div>
+<!--    <div class="content">-->
+<!--        <div class="pinglun">-->
+<!--            <ul class="top">-->
+<!--                <li>用户名</li>-->
+<!--                <li style="margin-left: 140px;">内容</li>-->
+<!--                <li style="margin-left: 150px;">时间</li>-->
+<!--                <li style="margin-left: 95px;">操作</li>-->
+<!--            </ul>-->
+<!--            <ul class="neirong">-->
+<!--                <li v-for="(item) in list">-->
+<!--                    <span class="name">{{item.user_name}}</span>-->
+<!--                    <span>{{ item.comments }}</span>-->
+<!--                    <span>{{item.utime}}</span>-->
+<!--                    <span class="btn">删除</span>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
+</body>
+<script src="./js/message.js"></script>
+</html>

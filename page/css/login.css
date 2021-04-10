@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-size: 13px;
+}
+
+.page > .header {
+    width: 100%;
+    height: 100px;
+    line-height: 70px;
+    text-align: left;
+    z-index: 10;
+    background-color: #fff;
+    font-family: "微软雅黑";
+    box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+
+}
+
+.page > .header > .topbar {
+    max-width: 1380px;
+    min-width: 1140px;
+    margin: 0 auto;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+}
+.page > .header > .topbar > a {
+    margin-top: -2px;
+    width: 330px;
+    height: 100px;
+    float: left;
+    margin-left: 18px;
+}
+.page > .header > .topbar  > a >  img {
+    width: 100%;
+    height: 100%;
+}
+
+.page > .header > .topbar .p {
+    float: right;
+    width: auto;
+    height: 100px;
+    vertical-align: top;
+    margin-top: -1px;
+}
+
+.page > .header > .topbar .p span {
+    display: block;
+    line-height: 100px;
+    font-size: 18px;
+    color: #738299;
+}
+.page > .header > .topbar .p span::before{
+    display: inline-block;
+    content: "";
+    width: 36px;
+    height: 28px;
+    background: url("../img/msg.PNG") 0 0 no-repeat;
+    position: relative;
+    left: -5px;
+    line-height: 28px;
+    top: 7px;
+}
+
+
+
+
+
+
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.page .content {
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    /*background: antiquewhite;*/
+    position: relative;
+}
+
+.page > .content > .log{
+    width: 100%;
+    height: 38px;
+    position: absolute;
+    margin-top: 15px;
+}
+.page > .content > .log > a{
+    display: inline-block;
+    width: 87px;
+    height: 38px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page > .content > .log > a > img{
+    display: inline-block;
+    width: 87px;
+    height: 38px;
+}
+
+.page > .content > .login {
+    display: block;
+    position: absolute;
+    height: 346px;
+    width: 350px;
+    border-radius: 4px;
+    border: 1px #ddd solid;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 65px;
+}
+.page > .content > .login > .login-inner {
+    border-radius: 4px;
+    position: relative;
+    padding: 20px 26px;
+}
+
+.page > .content > .login > .login-inner > h1{
+    text-align: left;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.page > .content > .login > .login-inner > .namePassword label {
+    display: block;
+
+    text-align: left;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    font-weight: 700;
+}
+
+.page > .content > .login > .login-inner > .namePassword span  {
+    display: block;
+    /*height:30px;*/
+    /*line-height: 30px;*/
+    color: #ff4400;
+    display: none;
+    margin-bottom: 5px;
+}
+
+
+.page > .content > .login > .login-inner > .namePassword input {
+    display: block;
+    width: 100%;
+    height: 28px;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,.5), 0 1px 0 rgba(0,0,0,.07) inset;
+    outline: 0;
+    margin-bottom: 10px;
+}
+
+.page > .content > .login > .login-inner > .namePassword input.active{
+    box-shadow: 0px 0px 2px #f40 ;
+}
+
+
+/*登录按钮*/
+.page > .content > .login > .login-inner > .namePassword > .login-btn {
+    box-shadow: 0 1px 0 rgba(255,255,255,.4) inset;
+    width: 100%;
+    background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+    border: 1px solid #000;
+    border-radius: 3px;
+    outline: none;
+    height: 35px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+/*忘记密码和注册*/
+
+.page > .content > .login > .login-inner > .forget_register {
+    width: 100%;
+    height: 30px;
+    padding: 5px 3px;
+}
+.page > .content > .login > .login-inner > .forget_register a {
+    display: inline-block;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 26px;
+    color: #000;
+}
+
+.page > .content > .login > .login-inner > .forget_register a:hover{
+    color: #ff4400;
+}
+
+
+.page > .content > .login > .login-inner > .forget_register a.forget{
+    left: 0;
+}
+.page > .content > .login > .login-inner > .forget_register a.register {
+    right: 0;
+}
+
+.page > .content > .login > .login-inner > .state {
+    width: 100%;
+    height: 35px;
+}
+
+.page > .content > .login > .login-inner > .state > p{
+    line-height: 35px;
+}
+
+
+/*//footer*/
+
+
+.foot{
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: linear-gradient(to bottom,rgba(0,0,0,.14),rgba(0,0,0,.03) 3px,transparent);
+    margin-top: 200px;
+}

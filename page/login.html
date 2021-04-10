@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="page">
+    <div class="header">
+        <div class="topbar">
+            <a href="" target="_blank" >
+<!--                <img src="./img/logo.PNG" alt="">-->
+            </a>
+            <div class="p" style="margin-right: 100px;">
+                <span>欢迎访问贾臻个人博客</span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="login">
+            <div class="login-inner">
+                <h1>登录</h1>
+                <div class="namePassword">
+                    <label for="user">用户名</label>
+                    <input type="text"  id="user" class="oInput" placeholder="请输入用户名">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" class="oInput" placeholder="请输入密码">
+                    <span class="waring">用户名不存在或密码错误</span>
+                    <input type="submit" class="login-btn" id="loginBtn" onclick="login()" value="登录" />
+                </div>
+                <div class="forget_register">
+                    <a href="./getBackPassword.html" class="forget">忘记密码？</a>
+                    <a href="./register.html" class="register">免费注册 有惊喜</a>
+                </div>
+                <div class="state">
+                    <p>登录即表示您同意网站的使用条件及隐私声明</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+
+    </div>
+</div>
+</body>
+<script src="./js/login.js"></script>
+</html>

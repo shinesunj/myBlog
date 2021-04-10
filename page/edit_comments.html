@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/edit_comments.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header><h1>用户评论最新排名</h1></header>
+
+        <div class="content">
+            <div class="pinglun">
+                <ul class="top">
+                    <li>用户名</li>
+                    <li style="margin-left: 120px;">评论博客编号</li>
+                    <li style="margin-left: 115px;">内容</li>
+                    <li style="margin-left: 150px;">时间</li>
+                    <li style="margin-left: 95px;">操作</li>
+                </ul>
+                <ul class="neirong">
+                    <li v-for="(item) in list">
+                        <span class="name"><input type="text" :value="item.user_name"></span>
+                        <span><input type="text" :value="item.blog_id"></span>
+                        <span><input type="text" :value="item.comments"></span>
+                        <span><input type="text" :value="item.utime"></span>
+                        <span class="btn" :data="item.blog_id">删除</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="./js/edit_comments.js"></script>
+</html>

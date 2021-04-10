@@ -1,0 +1,125 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>免费注册，有惊喜呦~</title>-->
+<!--    <link rel="stylesheet" href="./css/register.css">-->
+<!--    <script src="./js/jquery-3.3.1.js"></script>-->
+<!--    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="wrapper" id="wrapper">-->
+<!--    <div class="header">-->
+<!--        <div class="topbar">-->
+
+<!--           <span style="display: block;padding: 10px 20px; font-size: 24px; color: #424242; position:absolute; left: 50%; transform: translateX(-50%)">用户注册</span>-->
+<!--            -->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="regform">-->
+<!--        <div class="regbox">-->
+<!--            <div class="borderTop"></div>-->
+<!--            <div class="content">-->
+<!--                <div class="u-input">-->
+<!--                    <label for="userName">用户名</label>-->
+<!--                    <div class="input-wrapper">-->
+<!--                        <input type="text" placeholder="4到16位（字母，数字，下划线，减号)" id="userName">-->
+<!--                    </div>-->
+<!--                    <div class="warning U">-->
+<!--                        <span v-show="regFlag" class="regFlag">{{ regTest }}</span>-->
+<!--                        <span v-show="repeatFlag" class="repeatFlag">{{ repestTest }}</span>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class="u-input">-->
+<!--                    <label for="password">密码</label>-->
+<!--                    <div class="input-wrapper">-->
+<!--                        <input type="password" id="password" placeholder="请输入您的密码">-->
+<!--                    </div>-->
+<!--                    <div class="warning P">-->
+<!--                        <span v-show="regPwdFalg" class="regPwdFalg">{{ pwdTest }}</span>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class="u-input">-->
+<!--                    <label for="S-password">确认密码</label>-->
+<!--                    <div class="input-wrapper">-->
+<!--                        <input type="password" name="" id="S-password" placeholder="请再输入一遍密码">-->
+<!--                    </div>-->
+<!--                    <div class="warning R">-->
+<!--                        <span v-show="Spassword" class="Spassword">{{ Spassword }}</span>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="bottomBar">-->
+<!--                <button class="bigBtn">免费注册</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</body>-->
+<!--<script src="./js/register.js"></script>-->
+<!--</html>-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/register.css">
+    <script src="./js/jquery-3.3.1.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+    <div class="header">
+        <div class="topbar">
+            <div class="p" style="margin-right: 100px;">
+                <span>欢迎访问贾臻个人博客</span>
+            </div>
+        </div>
+    </div>
+    <div class="regform">
+           <div class="page-box">
+
+               <div class="form-box">
+                   <div class="created">
+                       <span>创建一个博客账户</span>
+                   </div>
+                   <div class="big-box">
+                       <div class="inner-box">
+                           <div class="form-input username">
+                               <label for="userName">输入用户名</label>
+                               <input type="text" class="" id="userName" placeholder="4到16位（字母，数字，下划线，减号)">
+                               <span v-show="regFlag" class="regFlag">{{ regTest }}</span>
+                               <span v-show="repeatFlag" class="repeatFlag">{{ repestTest }}</span>
+                           </div>
+                           <div class="form-input password" >
+                               <label for="password">输入密码</label>
+                               <input type="password" id="password" placeholder="请输入密码">
+                               <span v-show="regPwdFalg" class="regPwdFalg">{{ pwdTest }}</span>
+                           </div>
+                           <div class="form-input repeat" >
+                               <label for="S-password">确认密码</label>
+                               <input type="password" placeholder="请再重复密码" id="S-password">
+                               <span v-show="Spassword" class="Spassword">{{ Spassword }}</span>
+                           </div>
+                           <div class="submit">
+                               <button class="bigBtn">免费注册</button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    <div class="foot"></div>
+    </div>
+</body>
+<script src="./js/register.js"></script>
+</html>

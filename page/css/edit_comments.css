@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper header {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+.wrapper .content{
+    width: 100%;
+}
+
+.wrapper ul{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+}
+
+.wrapper .content .top::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+.wrapper .content .top li{
+    float: left;
+    margin-left: 70px;
+}
+
+.wrapper ul.neirong{
+    top: 200px;
+}
+
+.wrapper ul.neirong input{
+    pointer-events: none;
+}
